@@ -1,0 +1,10 @@
+<h1>SKIS INDEX</h1>
+
+<ul>
+  <% @skis.each do |ski| %>
+    <li><%= ski.brand %></li>
+    <%= link_to "details", ski_path(ski) %>
+    <% end %>
+</ul>
+
+<%= link_to 'Have a big pair?', new_ski_path %>
