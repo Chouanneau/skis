@@ -17,8 +17,12 @@ end
 
 def create
   @ski = Ski.new(ski_params)
-  if @ski.save
-    redirect_to skis_path(@ski)
+  p @ski
+  @ski.user = current_user
+  p @ski
+
+  if @ski.save!
+    redirect_to skis_path
   else
     render :new
   end
