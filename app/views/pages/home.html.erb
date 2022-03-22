@@ -1,2 +1,65 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rooski</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="jumbotron text-white" style="background-image: url(https://images.unsplash.com/photo-1582746652442-5ee61e88b27d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1796&q=80); background-size: 100%;">
+        <h1>Rooski</h1>
+        <p>Location de skis dans ta région</p>
+        <div class="input-group">
+          <div class="form-outline">
+            <input id="search-input" type="search" id="form1" class="form-control w-50" />
+            <button id="search-button" type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="d-flex justify-content-center pb-4 bg-yellow">Catégories</h2>
+    </div>
+    <div class="container d-flex justify-content-between">
+      <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="card-title">Ski alpin</h3>
+            <p>Lattes de descente pour prendre du plaisir sur les pistes, pour toute la famille.</p>
+            <a href="#" class="btn btn-primary">Louer</a>
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1615897935059-d3ed4a4aef84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="card-title">Ski de fond</h3>
+              <p>Skis nordiques pour tester votre endurance sur les chemins dédiés.</p>
+            <a href="#" class="btn btn-primary">Louer</a>
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1643701846261-a96ab2da7188?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="card-title">Ski rando</h3>
+            <p>Sortez des sentiers battus pour aller explorer les plus hauts sommets.</p>
+            <a href="#" class="btn btn-primary">Louer</a>
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1625154869776-100eba31abbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=891&q=80" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="card-title">Snowboard</h3>
+            <p>Ridez sans limite, sur piste ou dans la poudreuse. A vous les tricks!</p>
+            <a href="#" class="btn btn-primary">Louer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
