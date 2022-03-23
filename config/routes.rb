@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   # patch  "skis/:id",                      to: "skis#update"
   # delete "skis/:id",                      to: "skis#destroy"
   resources :skis
+  resources :rentals
 
+  resources :skis do
+    resources :rentals, only: [:new, :create]
+  end
 end

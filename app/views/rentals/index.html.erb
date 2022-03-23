@@ -1,0 +1,8 @@
+<h1>RENTALS INDEX</h1>
+
+      <ul>
+        <% @rentals.each do |rental| %>
+          <li><%= ski.brand %></li>
+          <%= link_to "details", ski_path(ski) %>
+          <% end %>
+      </ul>
