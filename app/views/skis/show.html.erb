@@ -12,36 +12,32 @@
 <body>
   <div class="container-fluid">
     <div class="row d-flex justify-content-between" style="background-color: black; color: white;">
+
       <div class="col-6">
-          <h2><%= @ski.brand %> <%= @ski.category %> <%= @ski.sizing %> cm</h2>
-          <h4><%= @ski.description %></h4>
+        <h2><%= @ski.brand %> <%= @ski.category %> <%= @ski.sizing %> cm</h2>
+        <h4><%= @ski.description %></h4>
       </div>
 
       <div class="col-6 d-flex flex-row-reverse mr-2 justify-content-xl-center align-items-center">
-          <button type="button" class="btn btn-light p-3">ride me!</button>
-          <h3 class="mb-4 p-5">CHF <%= @ski.price %></h3>
-          <%= @ski.availability %></p>
-      </div>
-    </div>
-
-
-  <h3 class="row d-flex justify-content-center mt-5 mb-5 p-4 bg-yellow">Here is your next riding buddy</h3>
-
-
-  <div class="container">
-    <div class="cards">
-
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1552853662-8f707e1cb336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80)">
-      </div>
-
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1552853662-8f707e1cb336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80)">
-      </div>
-
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1552853662-8f707e1cb336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80)">
+        <button type="button" class="btn btn-light p-3">ride me!</button>
+        <h3 class="mb-4 p-5">CHF <%= @ski.price %></h3>
+        <%= @ski.availability %></p>
       </div>
 
     </div>
   </div>
+
+  <h3 class="row d-flex justify-content-center mt-5 mb-5 p-4 bg-yellow">Here is your next riding buddy</h3>
+
+<div class="container">
+    <p style="text-align:center;">
+    <img src="https://images.unsplash.com/photo-1552853662-8f707e1cb336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80" alt=""
+    width="400">
+    </p>
+</div>
+
+
+
 
 </body>
 </html>
