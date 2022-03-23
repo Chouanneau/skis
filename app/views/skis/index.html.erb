@@ -24,14 +24,15 @@
 
 
 <div class="container">
-<div class="cards">
-  <% @skis.each do |ski| %>
-    <div class="card-category mt-5 mx-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1552853662-8f707e1cb336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80)">
-        <%= ski.brand %>
-        <%= link_to "details", ski_path(ski) %>
-    </div>
-  <% end %>
-</div>
+  <div class="cards">
+    <% @skis.each do |ski| %>
+    <%= link_to ski_path(ski) do %>
+      <div class="card-category mt-5 mx-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1552853662-8f707e1cb336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80)">
+          <%= ski.brand %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 
 
