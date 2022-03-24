@@ -10,7 +10,10 @@
       <%= f.input :title %>
     </div>
     <div class=“mb-3”>
-      <%= f.input :category, collection: [ "Ski Alpin", "Ski de Rando", "Snowboard" ]%>
+      <%= f.input :category, collection: [ "Ski Alpin","Ski de Fond", "Ski de Rando", "Snowboard" ]%>
+    </div>
+    <div class=“mb-3”>
+      <%= f.input :sizing %>
     </div>
     <div class=“mb-3”>
       <%= f.input :description %>
@@ -26,8 +29,3 @@
     </div>
   <% end %>
 </div>
-
-
-    <%# <div class=“mb-3”>
-      <%= f.input :sizing %>
-    <%# </div> %>
