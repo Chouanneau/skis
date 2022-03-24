@@ -5,14 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/assets/pages/_home.scss">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
-  <body class="bg-light">
-    <div class="container-fluid">
-      <div class="jumbotron text-white" style="background-image: url(https://images.unsplash.com/photo-1582746652442-5ee61e88b27d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1796&q=80); background-size: 100%;">
-        <h1>Rooski</h1>
-        <p>Location de skis dans ta région</p>
+
+<body>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1582746652442-5ee61e88b27d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1796&q=80); background-size: 100%);">
+  <div class="container">
+    <h1>Rooski</h1>
+    <p>Loue tes skis dans ta région</p>
           <%= form_tag skis_path, class:"d-flex", method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -21,13 +24,16 @@
             %>
             <%= submit_tag "Search", class: "btn btn-primary" %>
           <% end %>
-      </div>
-    </div>
+  </div>
+</div>
 
-
+<div class="container justify-content-center">
+  <h3>Il a neigé toute la nuit, le ciel est clair.</h3>
+  <h3>Rencontre des passionés de ski dans ta région et loue leur matériel.</h3>
+</div>
 
     <div>
-      <h2 class="d-flex justify-content-center pb-4 bg-yellow">Catégories</h2>
+      <h2 class="d-flex justify-content-center mt-4 pb-4 bg-yellow"></h2>
     </div>
     <div class="container d-flex justify-content-between">
       <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
@@ -64,5 +70,5 @@
         </div>
       </div>
     </div>
-  </body>
+</body>
 </html>
