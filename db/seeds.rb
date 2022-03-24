@@ -1,5 +1,6 @@
 require "nokogiri"
 require "open-uri"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -43,10 +44,8 @@ doc.search('.df-card').each do |element|
   sizing = element.search('.d-inline-block').first.text.strip
   price = element.search('.df-card__price').text.strip
   category = "Ski Alpin"
-  # photo_url = element.search('.df-card__image').text.strip
-  # price = ...
-  # photo_url = ...
-  # photo_file = URI.open(photo_url)
+  p photo_url = element.search('.df-card__image img').attribute('src').value
+  photo_file = URI.open("https:" + photo_url)
 
   ski = Ski.new(
     title: title,
@@ -58,6 +57,7 @@ doc.search('.df-card').each do |element|
     user: User.all.sample,
     availability: true
   )
-  # ski.attach.photo(io: photo_file)
+  ski.photo.attach(io: photo_file, filename: "#{title}.jpg", content_type: 'image/jpg')
+  # article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   ski.save!
 end
