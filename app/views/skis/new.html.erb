@@ -3,16 +3,17 @@
 <div class="container">
   <%= simple_form_for(@ski) do |f| %>
     <div class=“mb-3s”>
-      <%= f.input :brand %>
+      <%= f.input :brand, collection: ["Rossignol", "Salomon", "Atomic", "K2", "Volkl", "Dynastar", "Smith", "Marker", "Scott", "Black\ Crows", "Oakley", "Faction", "Bjorn", "Daehlie", "Cairn", "Armada", "Bolle", "Swix", "Blizzard", "Head", "Vola"
+] %>
     </div>
     <div class=“mb-3”>
-      <%= f.input :category, collection: [ "Ski Alpin", "Ski de Rando", "Ski de Fond", "Snowboard" ]%>
+      <%= f.input :title %>
     </div>
-      <div class=“mb-3”>
+    <div class=“mb-3”>
+      <%= f.input :category, collection: [ "Ski Alpin", "Ski de Rando", "Snowboard" ]%>
+    </div>
+    <div class=“mb-3”>
       <%= f.input :description %>
-    </div>
-    <div class=“mb-3”>
-      <%= f.input :sizing %>
     </div>
     <div class=“mb-3”>
       <%= f.input :price %>
@@ -22,3 +23,8 @@
     </div>
   <% end %>
 </div>
+
+
+    <%# <div class=“mb-3”>
+      <%= f.input :sizing %>
+    <%# </div> %>

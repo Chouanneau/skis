@@ -40,7 +40,7 @@ end
 private
 
   def ski_params
-    params.require(:ski).permit(:brand, :description, :sizing, :category, :price)
+    params.require(:ski).permit(:brand, :description, :sizing, :category, :price, :title)
   end
 
 end
