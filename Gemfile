@@ -7,6 +7,9 @@ ruby '3.0.3'
 gem 'bootstrap'
 # Devise
 gem 'devise'
+# Geocoding
+gem "geocoder"
+
 
 # Search bar
 gem 'pg_search', '~> 2.3.0'
