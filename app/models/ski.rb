@@ -12,5 +12,4 @@ class Ski < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-
 end

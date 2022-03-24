@@ -11,9 +11,16 @@ class SkisController < ApplicationController
     else
       @skis = Ski.all
     end
+
+    # @markers = @skis.map do |ski|
+    #   {
+    #     lat: ski.user.geocode.latitude,
+    #     lng: ski.user.geocode.longitude
+    #   }
+    # end
   end
 
-#SHOW the skis selected
+  #SHOW the skis selected
   def show
     @ski = Ski.find(params[:id])
   end

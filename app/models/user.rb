@@ -8,4 +8,6 @@ class User < ApplicationRecord
   validates :address, presence: true
   has_many :skis
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
