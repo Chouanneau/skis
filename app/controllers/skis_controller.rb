@@ -2,7 +2,15 @@ class SkisController < ApplicationController
 
  #GET all the skis
   def index
-    @skis = Ski.all
+    if params[:query].present?
+      sql_query = " \
+        skis.brand ILIKE :query \
+        OR skis.description ILIKE :query \
+      "
+      @skis = Ski.all.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @skis = Ski.all
+    end
   end
 
 #SHOW the skis selected
