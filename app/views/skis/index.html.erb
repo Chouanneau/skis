@@ -1,12 +1,30 @@
-<h1>SKIS INDEX</h1>
+<div class="container">
+  <div class="row d-flex justify-content-between">
 
-<%= link_to 'Have a big pair?', new_ski_path %>
-<%= link_to 'Home', "/" %>
+    <div class="col">
+      <h2>Choose your next riding buddy</h2>
+      <div class="btn btn-light"><%= link_to 'Want to make money renting your own skis?', new_ski_path %>
+    </div>
 
+  </div>
 
-      <ul>
-        <% @skis.each do |ski| %>
-          <li><%= ski.brand %></li>
-          <%= link_to "details", ski_path(ski) %>
-          <% end %>
-      </ul>
+  <div class="row d-flex justify-content-between">
+    <div class="cards">
+      <% @skis.each do |ski| %>
+        <%= link_to ski_path(ski) do %>
+        <div class="card-category mt-5 mx-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path ski.photo.key, height: 600, crop: :fill %>')">
+        <%= ski.brand %>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<div style="width: 100%; height: 600px;"
+  data-controller="mapbox"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>

@@ -7,6 +7,12 @@ ruby '3.0.3'
 gem 'bootstrap'
 # Devise
 gem 'devise'
+# Geocoding
+gem "geocoder"
+
+
+# Search bar
+gem 'pg_search', '~> 2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.5'
@@ -29,6 +35,9 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+# Gemfile
+gem 'cloudinary', '~> 1.16.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

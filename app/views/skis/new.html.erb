@@ -1,27 +1,33 @@
-<h1>Create your skis</h1>
+<h1 class="text-center">Create a new offer</h1>
 
-<%= form_for(@ski) do |f| %>
-  <div class=“mb-3”>
-    <%= f.label :brand %>
-    <%= f.text_field :brand %>
-  </div>
-  <div class=“mb-3”>
-    <%= f.label :category %>
-    <%= f.text_field :category %>
-  </div>
+<div class="container">
+  <%= simple_form_for(@ski) do |f| %>
+    <div class=“mb-3s”>
+      <%= f.input :brand, collection: ["Rossignol", "Salomon", "Atomic", "K2", "Volkl", "Dynastar", "Smith", "Marker", "Scott", "Black\ Crows", "Oakley", "Faction", "Bjorn", "Daehlie", "Cairn", "Armada", "Bolle", "Swix", "Blizzard", "Head", "Vola"
+] %>
+    </div>
     <div class=“mb-3”>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-  <div class=“mb-3”>
-    <%= f.label :sizing %>
-    <%= f.number_field :sizing %>
-  </div>
-  <div class=“mb-3”>
-    <%= f.label :price %>
-    <%= f.number_field :price %>
-  </div>
-  <div class=“mb-3”>
-  <%= f.submit "Create", class: "btn btn-primary" %>
-  </div>
-<% end %>
+      <%= f.input :title %>
+    </div>
+    <div class=“mb-3”>
+      <%= f.input :category, collection: [ "Ski Alpin", "Ski de Rando", "Snowboard" ]%>
+    </div>
+    <div class=“mb-3”>
+      <%= f.input :description %>
+    </div>
+    <div class=“mb-3”>
+      <%= f.input :price %>
+    </div>
+    <div class=“mb-3”>
+      <%= f.input :photo, as: :file %>
+    </div>
+    <div class=“mb-3”>
+    <%= f.submit "Create", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+
+
+    <%# <div class=“mb-3”>
+      <%= f.input :sizing %>
+    <%# </div> %>
