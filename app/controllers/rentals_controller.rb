@@ -14,8 +14,9 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.new(rental_params)
-    # @rental = Rental.find(params[:ski_id])
+    @ski = Ski.find(params[:ski_id])
     @rental.ski = @ski
+    @rental.user = current_user
 
     @rental.save
     redirect_to my_rentals_path
