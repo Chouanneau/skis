@@ -34,7 +34,7 @@ user8 = User.create!(username: "antoine", email: "antoine@gmail.com", password: 
 # # # user2 = User.create!(username: "2", email: "2@gmail.com", password: "123456", address: "Chemin des Joncquilles, Renens")
 # # user5 = User.create!(username: "5", email: "5@gmail.com", password: "123456", address: "Chemin des Joncquilles, Renens")
 
-categories = ["Ski Alpin", "Ski Rando"]
+categories = ["Ski Alpin", "Ski de Rando"]
 
 doc.search('.df-card').each do |element|
   title = element.search('.df-card__title').text.strip
