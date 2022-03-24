@@ -6,8 +6,10 @@ class User < ApplicationRecord
 
   validates :username, presence: true
   validates :address, presence: true
-  has_many :skis
 
+  has_many :skis, dependent: :destroy
+  has_many :rentals, dependent: :destroy
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
 end

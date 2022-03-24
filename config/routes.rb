@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   # get    "skis/:id",                      to: "skis#show", as: :ski
   # patch  "skis/:id",                      to: "skis#update"
   # delete "skis/:id",                      to: "skis#destroy"
-  resources :skis
 
+  get "/my_rentals", to: "rentals#my_rentals"
+
+  resources :skis, only: [:index, :show, :new, :create] do
+    resources :rentals, only: [:new, :create]
+  end
 end

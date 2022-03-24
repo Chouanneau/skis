@@ -1,0 +1,8 @@
+<h1>Your Rentals</h1>
+      <ul>
+        <% @rentals.each do |rental| %>
+          <li><%= rental.ski.brand %></li>
+          <li>From: <%= rental.start_date %></li>
+          <li>Until: <%= rental.end_date %></li>
+          <% end %>
+      </ul>

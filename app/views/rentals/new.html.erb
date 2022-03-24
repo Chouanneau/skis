@@ -1,0 +1,7 @@
+<h1>Book <%= @ski.brand %></h1>
+
+<%= simple_form_for [ @ski, @rental ] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit "Confirm booking", class: "btn btn-primary" %>
+<% end %>
