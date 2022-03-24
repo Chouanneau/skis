@@ -11,13 +11,15 @@ class SkisController < ApplicationController
     else
       @skis = Ski.all
     end
-
-    # @markers = @skis.map do |ski|
-    #   {
-    #     lat: ski.user.geocode.latitude,
-    #     lng: ski.user.geocode.longitude
-    #   }
-    # end
+    @users = User.all
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { user: user }),
+        image_url: helpers.asset_url("")
+      }
+    end
   end
 
   #SHOW the skis selected
