@@ -1,5 +1,6 @@
 class Ski < ApplicationRecord
   belongs_to :user
+  has_one_attached :photo
 
   validates :brand, presence: true, inclusion: { in: %w[Rossignol Salomon Atomic K2 Volkl Dynastar Smith Marker Scott Black\ Crows Oakley Faction Bjorn Daehlie Cairn Armada Bolle Swix Blizzard Head Vola Zag Dynafit]}
   validates :title, :description, :price, presence: true
