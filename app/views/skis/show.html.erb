@@ -1,39 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Ski details</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-
 <body>
-  <div class="container-fluid">
-    <div class="row d-flex justify-content-between" style="background-color: black; color: white;">
+<div class="container">
 
-      <div class="col-6">
+  <h3 class="row">Meet your next riding buddy</h3>
+  <div class="details d-flex">
+    <div class="col-8">
         <h2><%= @ski.brand %> <%= @ski.category %> <%= @ski.sizing %> cm</h2>
-        <h4><%= @ski.description %></h4>
-      </div>
+    </div>
 
-      <div class="col-6 d-flex flex-row-reverse mr-2 justify-content-xl-center align-items-center">
-        <button type="button" class="btn btn-light p-3">ride me!</button>
-        <h3 class="mb-4 p-5">CHF <%= @ski.price %></h3>
-        <%= @ski.availability %></p>
+    <div class="col-4">
+      <div class="row">
+        <div class="col-8">
+        <h3 class="m-2">CHF <%= @ski.price %></h3>
+        </div>
+
+        <div class="col-4">
+        <h4><button type="button" class="btn btn-dark m-2">ride me!</button></h4>
+        </div>
       </div>
 
     </div>
   </div>
 
-  <h3 class="row d-flex justify-content-center mt-5 mb-5 p-4 bg-yellow">Here is your next riding buddy</h3>
+  <div class="row">
+    <div class="col-2 mt-2">
+      <p class="m-1">
+      <%= cl_image_tag @ski.photo.key, height: 600, width: 200 , crop: :fill %></p>
+    </div>
 
-<div class="container">
-    <p style="text-align:center;">
-    <%= cl_image_tag @ski.photo.key, height: 600, width: 200 , crop: :fill %>
-    </p>
-</div>
+    <div class="col-10 mt-2">
+      <h6><%= @ski.description %></h6>
+    </div>
 
 <div style="width: 100%; height: 600px;"
   data-controller="mapbox"
