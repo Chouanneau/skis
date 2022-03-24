@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   validates :username, presence: true
   validates :address, presence: true
-  has_many :skis
-  has_many :rentals
+  has_many :skis, dependent: :destroy
+  has_many :rentals, dependent: :destroy
 end

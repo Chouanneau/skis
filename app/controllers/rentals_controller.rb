@@ -14,15 +14,15 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.new(rental_params)
-    @rental = Rental.find(params[:rental_id])
-
+    # @rental = Rental.find(params[:ski_id])
     @rental.ski = @ski
 
-    if @rental.save
-      redirect_to rentals_path
-    else
-      render :new
-    end
+    @rental.save
+    redirect_to my_rentals_path
+  end
+
+  def my_rentals
+    @rentals = Rental.where(user: current_user)
   end
 
 private
