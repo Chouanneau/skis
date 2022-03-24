@@ -8,6 +8,9 @@ gem 'bootstrap'
 # Devise
 gem 'devise'
 
+# Search bar
+gem 'pg_search', '~> 2.3.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.5'
 # Use postgresql as the database for Active Record
