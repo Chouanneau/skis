@@ -1,8 +1,9 @@
 .navbar-lewagon {
   justify-content: space-around;
   background: white;
-  background-color: transparent;
   border: 1px solid transparent;
+  position:sticky;
+  top: 1px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,9 +16,8 @@
 
 .nav-link {
   font-family: roboto;
-  text-align: center;
 }
 
-.nav-link a {
+.navbar-lewagon a {
   text-decoration: none;
 }
