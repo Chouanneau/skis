@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   # delete "skis/:id",                      to: "skis#destroy"
 
   get "/my_rentals", to: "rentals#my_rentals"
+  get "/my_skis", to: "skis#my_skis"
 
-  resources :skis, only: [:index, :show, :new, :create] do
+  resources :skis, only: [:index, :show, :new, :create, :destroy] do
     resources :rentals, only: [:new, :create]
   end
 end
