@@ -1,5 +1,6 @@
 class SkisController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: :show
  #GET all the skis
   def index
     if params[:query].present?
