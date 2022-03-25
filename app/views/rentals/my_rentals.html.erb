@@ -1,13 +1,13 @@
-<h1 class="mb-4">Rental hitory</h1>
+<h1 class="mb-4">Historique locations</h1>
 <div class="container col-4">
   <% @rentals.each do |rental| %>
     <div class="card-product mb-4">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <div class="card-product-infos">
         <h3><%= rental.ski.brand %></h3>
-        <p>From: <%= rental.start_date %></p>
-        <p>Until: <%= rental.end_date %></p>
-        <p><strong>Price: <%= rental.ski.price %></strong></p>
+        <p>Début: <%= rental.start_date %></p>
+        <p>Fin: <%= rental.end_date %></p>
+        <p><strong>Prix: <%= rental.ski.price %></strong></p>
       </div>
     </div>
   <% end %>
