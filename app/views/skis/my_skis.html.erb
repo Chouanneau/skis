@@ -1,23 +1,35 @@
-<div class="container">
-  <div class="row d-flex justify-content-between">
 
-    <div class="col">
+<div class="container">
+  <div class="row d-flex justify-content-between mb-3">
+    <div class="col-8">
       <h2>Mes Skis</h2>
     </div>
+    <div class="col-4 d-flex align-items-center">
+      <div class="rentyourskisbutton"><%= link_to ' + Nouvelle Offre', new_ski_path %></div>
+    </div>
+  </div>
+
 
   <div class="row d-flex justify-content-between">
     <div class="cards">
       <% @skis.each do |ski| %>
         <%= link_to ski_path(ski) do %>
-        <div class="card-category mt-5 mx-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path ski.photo.key, height: 600, crop: :fill %>')">
-        <%= ski.brand %>
-        <%= link_to "supprimer",
-            ski_path(ski),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
+        <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path ski.photo.key, height: 600, crop: :fill %>')">
+          <div class="brand-on-card">
+            <%= ski.brand %>
+          </div>
+          <div class="action-on-card">
+            <%= link_to ski_path(ski),
+                method: :delete,
+                data: { confirm: "Êtes-vous sur de vouloir supprimer votre offre ?" } do %>
+              <i class="fa-solid fa-trash-can"></i>
+            <% end %>
+          </div>
         </div>
         <% end %>
       <% end %>
     </div>
   </div>
 </div>
+<br>
+<br>

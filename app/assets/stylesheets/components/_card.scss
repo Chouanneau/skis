@@ -21,6 +21,7 @@
 
 .card-category a {
   text-decoration: none;
+  color: white;
 }
 
 .brand-on-card {
@@ -35,4 +36,17 @@
   padding: 5px;
   text-align: right;
   font-weight: lighter;
+}
+
+.action-on-card {
+  position: absolute;
+  top: 5px;
+  left: 140px;
+  padding: 5px;
+  text-align: right;
+  font-weight: lighter;
+}
+
+.action-on-card a {
+  text-decoration: none;
 }
