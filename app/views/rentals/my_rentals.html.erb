@@ -1,8 +1,14 @@
-<h1>Your Rentals</h1>
-      <ul>
-        <% @rentals.each do |rental| %>
-          <li><%= rental.ski.brand %></li>
-          <li>From: <%= rental.start_date %></li>
-          <li>Until: <%= rental.end_date %></li>
-          <% end %>
-      </ul>
+<h1 class="mb-4">Rental hitory</h1>
+<div class="container col-4">
+  <% @rentals.each do |rental| %>
+    <div class="card-product mb-4">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h3><%= rental.ski.brand %></h3>
+        <p>From: <%= rental.start_date %></p>
+        <p>Until: <%= rental.end_date %></p>
+        <p><strong>Price: <%= rental.ski.price %></strong></p>
+      </div>
+    </div>
+  <% end %>
+</div>
