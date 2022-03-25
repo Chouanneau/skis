@@ -5,6 +5,7 @@
   width: 180px;
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: center;
   color: white;
   font-size: 24px;
@@ -20,4 +21,18 @@
 
 .card-category a {
   text-decoration: none;
+}
+
+.brand-on-card {
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+}
+.price-on-card {
+  position: absolute;
+  top: 130px;
+  left: 100px;
+  padding: 5px;
+  text-align: right;
+  font-weight: lighter;
 }

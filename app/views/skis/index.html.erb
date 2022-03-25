@@ -14,7 +14,12 @@
       <% @skis.each do |ski| %>
         <%= link_to ski_path(ski) do %>
         <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path ski.photo.key, height: 600, crop: :fill %>')">
-          <%= ski.brand %>
+          <div class="brand-on-card">
+            <%= ski.brand %>
+          </div>
+          <div class="price-on-card">
+            <%= ski.price %>
+          </div>
         </div>
         <% end %>
       <% end %>
