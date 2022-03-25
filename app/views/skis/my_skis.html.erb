@@ -11,6 +11,9 @@
 
 
   <div class="row d-flex justify-content-between">
+    <div class="row">
+      <div class="col-4">
+
     <div class="cards">
       <% @skis.each do |ski| %>
         <%= link_to ski_path(ski) do %>
@@ -28,6 +31,8 @@
         </div>
         <% end %>
       <% end %>
+    </div>
+      </div>
     </div>
   </div>
 </div>
