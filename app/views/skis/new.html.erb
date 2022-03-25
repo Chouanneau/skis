@@ -1,31 +1,41 @@
-<h1 class="text-center">Créez votre offre ici</h1>
+
 
 <div class="container">
-  <%= simple_form_for(@ski) do |f| %>
-    <div class=“mb-3s”>
-      <%= f.input :brand, collection: ["Rossignol", "Salomon", "Atomic", "K2", "Volkl", "Dynastar", "Smith", "Marker", "Scott", "Black\ Crows", "Oakley", "Faction", "Bjorn", "Daehlie", "Cairn", "Armada", "Bolle", "Swix", "Blizzard", "Head", "Vola"
-] %>
+<h1 class="text-center">Créez votre offre ici</h1>
+  <div class="row">
+
+    <div class="col-3"></div>
+
+    <div class="col-6">
+      <%= simple_form_for(@ski) do |f| %>
+        <div class=“mb-3s”>
+          <%= f.input :brand, collection: ["Rossignol", "Salomon", "Atomic", "K2", "Volkl", "Dynastar", "Smith", "Marker", "Scott", "Black\ Crows", "Oakley", "Faction", "Bjorn", "Daehlie", "Cairn", "Armada", "Bolle", "Swix", "Blizzard", "Head", "Vola"] %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :title %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :category, collection: [ "Ski Alpin","Ski de Fond", "Ski de Rando", "Snowboard" ]%>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :sizing %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :description %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :price %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :photo, as: :file %>
+        </div>
+        <div class=“mb-3”>
+        <%= f.submit "Create", class: "btn btn-primary" %>
+        </div>
+      <% end %>
     </div>
-    <div class=“mb-3”>
-      <%= f.input :title %>
-    </div>
-    <div class=“mb-3”>
-      <%= f.input :category, collection: [ "Ski Alpin","Ski de Fond", "Ski de Rando", "Snowboard" ]%>
-    </div>
-    <div class=“mb-3”>
-      <%= f.input :sizing %>
-    </div>
-    <div class=“mb-3”>
-      <%= f.input :description %>
-    </div>
-    <div class=“mb-3”>
-      <%= f.input :price %>
-    </div>
-    <div class=“mb-3”>
-      <%= f.input :photo, as: :file %>
-    </div>
-    <div class=“mb-3”>
-    <%= f.submit "Create", class: "btn btn-primary" %>
-    </div>
-  <% end %>
+
+    <div class="col-3"></div>
+
+</div>
 </div>
