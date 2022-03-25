@@ -4,12 +4,12 @@
   justify-content: center;
   grid-gap: 16px;
   border-radius:20px;
-}
-
-.cards a:hover {
   text-decoration: none;
 }
 
+.cards a {
+  text-decoration: none;
+}
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {

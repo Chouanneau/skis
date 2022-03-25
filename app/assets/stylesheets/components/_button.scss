@@ -1,0 +1,22 @@
+.rentyourskisbutton{
+border-radius: 25px;
+background-color: #F4F4F4;
+border: 1px solid #4A4A4A;
+color: #4A4A4A;
+text-align: center;
+height: 30px;
+width: 300px;
+justify-content: center;
+transition: opacity 0.3s ease;
+font-weight: lighter;
+opacity: 0.6;
+text-decoration: none;
+}
+
+.rentyourskisbutton a {
+  text-decoration: none;
+}
+
+.rentyourskisbuttont:hover {
+  opacity: 1;
+}
