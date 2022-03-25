@@ -44,7 +44,15 @@ def create
   end
 end
 
+def my_skis
+  @skis = Ski.where(user: current_user)
+end
 
+def destroy
+  @ski = Ski.find(params[:id])
+  @ski.destroy
+  redirect_to my_skis_path
+end
 
 
 private
@@ -52,5 +60,4 @@ private
   def ski_params
     params.require(:ski).permit(:brand, :description, :sizing, :category, :price, :title, :photo)
   end
-
 end
