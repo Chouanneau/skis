@@ -1,8 +1,10 @@
 <body>
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1582746652442-5ee61e88b27d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1796&q=80); background-size: 100%);">
-  <div class="container">
-    <h1>Rooski</h1>
+  <div class="container mt-1 pt-2">
+  <h1 style="font-size: 120px">Rooski</h1>
+  <br>
+  <br>
     <p>Loue tes skis dans ta région</p>
           <%= form_tag skis_path, class:"d-flex", method: :get do %>
             <%= text_field_tag :query,
